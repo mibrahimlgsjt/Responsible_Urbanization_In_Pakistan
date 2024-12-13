@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Calculation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Traffic Calculation Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#data-sources">Data Sources</a></li>
+                <li><a href="#results">Calculation Results</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="data-sources">
+        <h2>Data Sources for Traffic Calculation</h2>
+        <p>Below are the primary data sources used for traffic calculation:</p>
+        <ul>
+            <li><strong>IoT Devices (Sensors):</strong> Real-time vehicle count, speed, and density.</li>
+            <li><strong>Aerial Imagery:</strong> Drone or satellite images to monitor traffic patterns.</li>
+            <li><strong>GPS Data:</strong> Vehicle locations and speeds from navigation devices.</li>
+            <li><strong>CCTV Cameras:</strong> Video feeds processed through machine vision for detecting congestion.</li>
+        </ul>
+    </section>
+
+    <section id="inputs">
+        <h2>Input Traffic Data</h2>
+        <form id="traffic-form">
+            <label for="iot-data">IoT Sensor Data:</label><br>
+            <textarea id="iot-data" name="iot-data" placeholder="Enter sensor readings (e.g., vehicle count, average speed)..."></textarea><br><br>
+
+            <label for="aerial-imagery">Aerial Imagery Data:</label><br>
+            <input type="file" id="aerial-imagery" name="aerial-imagery" accept="image/*"><br><br>
+
+            <label for="gps-data">GPS Data:</label><br>
+            <textarea id="gps-data" name="gps-data" placeholder="Enter GPS data (e.g., latitude, longitude, speed)..."></textarea><br><br>
+
+            <label for="cctv-data">CCTV Video Feed:</label><br>
+            <input type="file" id="cctv-data" name="cctv-data" accept="video/*"><br><br>
+
+            <button type="button" id="process-button">Process Traffic Data</button>
+        </form>
+    </section>
+
+    <section id="results">
+        <h2>Calculation Results</h2>
+        <div id="calculation-results">
+            <!-- Processed traffic data and results will appear here -->
+            <p>Click "Process Traffic Data" to calculate results based on the inputs.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Traffic Calculation Dashboard</p>
+    </footer>
+
+    <script>
+        // Placeholder script for processing traffic data
+        document.getElementById('process-button').addEventListener('click', function() {
+            const iotData = document.getElementById('iot-data').value;
+            const gpsData = document.getElementById('gps-data').value;
+            
+            const resultsDiv = document.getElementById('calculation-results');
+            
+            // Simulated traffic calculation
+            const simulatedTrafficDensity = Math.floor(Math.random() * 100) + 1; // Random traffic density (1-100%)
+            const simulatedCongestionLevel = simulatedTrafficDensity > 70 ? 'High' : (simulatedTrafficDensity > 40 ? 'Moderate' : 'Low');
+            
+            resultsDiv.innerHTML = `
+                <h3>Traffic Calculation Results</h3>
+                <p><strong>IoT Data:</strong> ${iotData ? 'Received' : 'No data provided'}</p>
+                <p><strong>GPS Data:</strong> ${gpsData ? 'Received' : 'No data provided'}</p>
+                <p><strong>Simulated Traffic Density:</strong> ${simulatedTrafficDensity}%</p>
+                <p><strong>Congestion Level:</strong> ${simulatedCongestionLevel}</p>
+            `;
+        });
+    </script>
+</body>
+</html>
