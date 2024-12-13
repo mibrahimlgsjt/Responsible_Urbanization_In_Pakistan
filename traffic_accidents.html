@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Accidents Reporting & Heat Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.css">
+</head>
+<body>
+    <header>
+        <h1>Traffic Accidents Reporting & Heat Map</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#report-section">Report Accident</a></li>
+                <li><a href="#heat-map-section">View Heat Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="report-section">
+        <h2>Report a Traffic Accident</h2>
+        <form id="accident-report-form">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter location" required>
+
+            <label for="time">Time of Accident:</label>
+            <input type="datetime-local" id="time" name="time" required>
+
+            <label for="severity">Severity:</label>
+            <select id="severity" name="severity" required>
+                <option value="minor">Minor</option>
+                <option value="moderate">Moderate</option>
+                <option value="severe">Severe</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Brief description of the accident" required></textarea>
+
+            <button type="submit">Submit Report</button>
+        </form>
+    </section>
+
+    <section id="heat-map-section">
+        <h2>Traffic Accidents Heat Map</h2>
+        <div id="map" style="height: 500px; width: 100%;"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Traffic Accident Reporting System</p>
+    </footer>
+
+    <script>
+        // Initialize the map using Leaflet.js
+        const map = L.map('map').setView([33.6844, 73.0479], 12); // Centered on Islamabad, Pakistan
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Placeholder for accident data points
+        const accidents = [
+            { lat: 33.6844, lon: 73.0479, severity: 'Moderate', description: 'Accident at main road.' },
+            { lat: 33.7000, lon: 73.1000, severity: 'Severe', description: 'Multiple vehicles involved.' }
+        ];
+
+        // Add markers to the map
+        accidents.forEach(accident => {
+            const marker = L.marker([accident.lat, accident.lon]).addTo(map);
+            marker.bindPopup(`<strong>Severity:</strong> ${accident.severity}<br><strong>Description:</strong> ${accident.description}`);
+        });
+
+        // Handle form submission
+        document.getElementById('accident-report-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Accident report submitted successfully!');
+            // Here, you can implement API calls to save data.
+        });
+    </script>
+</body>
+</html>
