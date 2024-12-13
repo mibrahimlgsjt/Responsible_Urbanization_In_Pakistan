@@ -22,25 +22,8 @@
 
     <section id="report-section">
         <h2>Report a Traffic Accident</h2>
-        <form id="accident-report-form">
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" placeholder="Enter location" required>
-
-            <label for="time">Time of Accident:</label>
-            <input type="datetime-local" id="time" name="time" required>
-
-            <label for="severity">Severity:</label>
-            <select id="severity" name="severity" required>
-                <option value="minor">Minor</option>
-                <option value="moderate">Moderate</option>
-                <option value="severe">Severe</option>
-            </select>
-
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" rows="4" placeholder="Brief description of the accident" required></textarea>
-
-            <button type="submit">Submit Report</button>
-        </form>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdEg4MqZjNWfNrCzRFLwLV9ir-Ajzrs7T3mlXMwtcK5duqqxw/viewform?embedded=true" 
+            width="100%" height="1147" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
 
     <section id="heat-map-section">
@@ -71,13 +54,6 @@
         accidents.forEach(accident => {
             const marker = L.marker([accident.lat, accident.lon]).addTo(map);
             marker.bindPopup(`<strong>Severity:</strong> ${accident.severity}<br><strong>Description:</strong> ${accident.description}`);
-        });
-
-        // Handle form submission
-        document.getElementById('accident-report-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Accident report submitted successfully!');
-            // Here, you can implement API calls to save data.
         });
     </script>
 </body>
