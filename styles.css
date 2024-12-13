@@ -1,162 +1,141 @@
-/* General Reset */
-* {
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
-/* Ensure HTML and body take full height */
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-/* Container to handle width dynamically */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Styles */
+/* Header */
 header {
-    background-color: #003366; /* Government theme color */
+    background-color: #004d40; /* Green shade */
     color: #fff;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 10px 0;
+    border-bottom: 5px solid #ffcc00; /* Accent with golden color */
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 }
 
 .logo img {
-    max-width: 80px;
-    height: auto;
-}
-
-.header-title {
-    text-align: center;
+    height: 70px;
 }
 
 .header-title h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.3rem;
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 .header-title p {
-    font-size: 0.9rem;
-    margin-top: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: lighter;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    padding: 0.5rem 0;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #00695c; /* Slightly darker green */
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #fff;
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #00509e;
-    border: 1px solid #fff;
+    color: #ffcc00; /* Golden hover effect */
 }
 
-/* Main Section */
-main {
-    padding: 1rem 0;
-    flex: 1 0 auto;
-}
-
+/* Main content */
 .intro {
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 50px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .feature {
-    flex: 1 1 calc(50% - 2rem);
-    background: #f4f4f4;
-    padding: 1rem;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 48%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .feature-img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     border-radius: 5px;
-}
-
-.mission {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #e8f4fc;
-    border-radius: 8px;
 }
 
 /* Footer */
 footer {
-    background: #003366;
+    background-color: #004d40;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 5px solid #ffcc00;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-container p {
+    margin-right: 20px;
 }
 
 .flag-icon {
-    max-width: 50px;
-    height: auto;
-    margin-left: 1rem;
+    height: 40px;
+    width: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .feature {
-        flex: 1 1 100%;
-    }
-
     .header-title h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .header-title p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
     }
 }
