@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Light Map</title>
+    <title>Wealth Distribution and Average housing Values across Islamabad</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,24 +12,29 @@
         <nav>
             <ul>
                 <li><a href="index.html">Dashboard</a></li>
-        
             </ul>
         </nav>
     </header>
     <section>
-        <h2>City Light Map</h2>
-        <p>This map uses satellite data to divide the city into poor and rich areas, based on light density at night.</p>
-        <div id="light-map">
-            <!-- Light map visualization goes here -->
-        </div>
+        <p>This map uses average housing properties to calculate wealth distribution of different areas of Islamabad.</p>
+        
+        <!-- Embedded Google Sheets iframe -->
+        <iframe 
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTn4aAHtJRCJqDI3eacMrf1-MPS91TOQa-yndqdSmCrqloJhkCMnDplZI78Hji1bA/pubhtml?gid=861096072&amp;single=true&amp;widget=true&amp;headers=false"
+            width="100%" 
+            height="800px"
+            frameborder="0"
+            style="border: none;">
+        </iframe>
     </section>
-       <footer>
-            <div class="container footer-container">
-                <p>&copy; 2024 Pakistan Safety Project. Government of Pakistan. All rights reserved.</p>
-                <img src="pakistan_flag.png" alt="Pakistan Flag" class="flag-icon">
-            </div>
-        </footer>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2024 Pakistan Safety Project. Government of Pakistan. All rights reserved.</p>
+            <img src="pakistan_flag.png" alt="Pakistan Flag" class="flag-icon">
+        </div>
+    </footer>
+
     <script src="scripts.js"></script>
-  
 </body>
 </html>
