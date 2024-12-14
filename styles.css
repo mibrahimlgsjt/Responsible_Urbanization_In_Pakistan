@@ -9,16 +9,20 @@ body {
 
 /* Header */
 header {
-    background-color: #004d40; /* Green shade */
+    background-color: #004d40; /* Dark green, typical of government themes */
     color: #fff;
-    padding: 10px 0;
-    border-bottom: 5px solid #ffcc00; /* Accent with golden color */
+    padding: 15px 0;
+    border-bottom: 5px solid #ffcc00; /* Accent with golden color for a distinguished look */
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .logo img {
@@ -27,13 +31,15 @@ header {
 
 .header-title h1 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .header-title p {
     margin: 0;
     font-size: 1rem;
     font-weight: lighter;
+    color: #e0e0e0; /* Lighter text for the tagline */
 }
 
 /* Navigation */
@@ -42,24 +48,28 @@ nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 10px 0;
-    background-color: #00695c; /* Slightly darker green */
+    padding: 12px 0;
+    background-color: #00695c; /* Slightly darker green for a professional look */
+    border-top: 1px solid #ffcc00;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Golden hover effect */
+    background-color: #ffcc00; /* Golden hover effect for links */
+    color: #004d40; /* Change text to dark green on hover */
 }
 
 /* Main content */
@@ -72,10 +82,25 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+.intro h2 {
+    font-size: 2rem;
+    color: #004d40; /* Dark green color for headings */
+    font-weight: bold;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Features Section */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .feature {
@@ -100,6 +125,17 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+.feature h3 {
+    font-size: 1.5rem;
+    color: #004d40; /* Green color for headings */
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
 /* Footer */
 footer {
     background-color: #004d40;
@@ -114,6 +150,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .footer-container p {
@@ -137,5 +175,9 @@ footer {
 
     .features {
         grid-template-columns: 1fr;
+    }
+
+    .feature {
+        padding: 15px;
     }
 }
