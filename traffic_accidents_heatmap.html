@@ -21,13 +21,52 @@
         </ul>
     </nav>
     
-    <!-- Increased iframe size for better visibility -->
-    <iframe 
-        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQOhqxGOpZllv1LzremzLcVlqjTl4uDAh71Gk166UOm2eFY5FcJiqIkzgav6jaBqA/pubhtml?gid=1399004628&amp;single=true&amp;widget=true&amp;headers=false"
-        width="100%" 
-        height="800px"
-        frameborder="0"
-        style="border: none;">
-    </iframe>
+    <!-- Container for the content -->
+    <div class="container">
+        <!-- Left side for embedded Google Sheets -->
+        <div class="left-column">
+            <iframe 
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBtS2UOl-QShbvXYCBe4Put4gXhs13T823PXUApVrO5jU6P9OngqAonILMFivn4g/pubhtml?gid=428347992&amp;single=true&amp;widget=true&amp;headers=false"
+                width="100%" 
+                height="800px"
+                frameborder="0"
+                style="border: none;">
+            </iframe>
+        </div>
+        
+        <!-- Right side for the textual information -->
+        <div class="right-column">
+            <h2>Danger Index Calculation</h2>
+            <p><strong>Danger Index = (Minor Accidents) + 2 × (Moderate Accidents) + 3 × (Severe Accidents) + 4 × (Deaths)</strong></p>
+
+            <h2>Top 10 Most Dangerous Districts</h2>
+            <ul>
+                <li>F-17 (1470)</li>
+                <li>I-12 (1484)</li>
+                <li>E-17 (1468)</li>
+                <li>E-9 (1260)</li>
+                <li>H-12 (1260)</li>
+                <li>F-7 (1166)</li>
+                <li>H-10 (1165)</li>
+                <li>I-16 (1165)</li>
+                <li>D-17 (965)</li>
+                <li>G-10 (965)</li>
+            </ul>
+
+            <h2>Top 10 Safest Districts</h2>
+            <ul>
+                <li>D-12 (7)</li>
+                <li>G-7 (7)</li>
+                <li>H-11 (7)</li>
+                <li>H-9 (14)</li>
+                <li>G-11 (27)</li>
+                <li>C-14 (28)</li>
+                <li>E-16 (28)</li>
+                <li>G-15 (28)</li>
+                <li>I-14 (28)</li>
+                <li>F-6 (42)</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
