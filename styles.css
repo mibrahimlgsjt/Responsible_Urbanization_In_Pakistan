@@ -48,28 +48,40 @@ nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 12px 0;
+    padding: 0;
     background-color: #00695c; /* Slightly darker green for a professional look */
     border-top: 1px solid #ffcc00;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 10px 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 10px;
+    font-size: 1rem;
+    padding: 10px 15px;
     border-radius: 4px;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #ffcc00; /* Golden hover effect for links */
-    color: #004d40; /* Change text to dark green on hover */
+    background-color: #004d40; /* Golden hover effect for links */
+    color: #ffcc00;; /* Change text to dark green on hover */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically on smaller screens */
+        align-items: center; /* Center-align items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust spacing for stacked items */
+    }
 }
 
 /* Main content */
