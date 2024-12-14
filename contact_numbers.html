@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* Dashboard link with updated light green color */
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #3b6e5d; /* Lighter shade of dark green */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Small yellow border below Header */
+        header::after {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 100%;
+            background-color: #f9b233;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #004d40;
+            font-weight: bold;
+        }
+
+        /* Grid Layout for Contacts */
+        .contacts {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .contact-card {
+            padding: 20px;
+            background-color: #004d40;
+            color: white;
+            border-radius: 8px;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-card h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #f9b233; /* Golden-yellow for contact numbers */
+        }
+
+        .contact-card p {
+            margin: 10px 0 0;
+            color: #ddd;
+        }
+
+        /* Green border on the LEFT of the entire paragraph block */
+        .last-panel {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f0f4f3;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-left: 5px solid #004d40; /* Single green border tracing the left side */
+        }
+
+        .emergency-info {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        footer img {
+            width: 40px;
+            margin-top: 10px;
+        }
+
+        /* Small yellow border below Footer */
+        footer::after {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 100%;
+            background-color: #f9b233;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Emergency Contacts</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="section-title">Contact Numbers</div>
+        <div class="contacts">
+            <!-- Contact Cards -->
+            <div class="contact-card">
+                <h3>1122</h3>
+                <p>Call Rescue</p>
+            </div>
+            <div class="contact-card">
+                <h3>1124</h3>
+                <p>Call Punjab Highway Patrol</p>
+            </div>
+            <div class="contact-card">
+                <h3>130</h3>
+                <p>Call Motorway Police</p>
+            </div>
+            <div class="contact-card">
+                <h3>1991</h3>
+                <p>Call Cyber Crime</p>
+            </div>
+            <div class="contact-card">
+                <h3>0800-55055</h3>
+                <p>Call PTA</p>
+            </div>
+            <div class="contact-card">
+                <h3>1121</h3>
+                <p>Call Child Protection & Welfare Bureau</p>
+            </div>
+        </div>
+
+        <!-- Emergency Information Section -->
+        <div class="last-panel">
+            <div class="emergency-info">
+                <p>
+                    In case of an emergency, it is essential to remain calm and act swiftly. Use the contact numbers listed above to connect with the appropriate authorities. For life-threatening emergencies, such as medical issues, fires, or accidents, dial 1122 to access rescue services available 24/7.
+                </p>
+                <p>
+                    When traveling on highways, reach out to the Punjab Highway Patrol at 1124 or the Motorway Police at 130 for assistance with road accidents, breakdowns, or security concerns. For cases involving online harassment, scams, or hacking, call the Cyber Crime Department at 1991. Child safety concerns can be reported to the Child Protection Bureau at 1121. These services are designed to safeguard lives and ensure public safety across Pakistan.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Emergency Services. All rights reserved.</p>
+        <img src="C:\Users\Dell\Downloads\pakistan.png" alt="Pakistan Flag">
+    </footer>
+</body>
+</html>
