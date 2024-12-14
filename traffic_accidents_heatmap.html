@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traffic Accident Data</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        iframe {
-            border: none;
-            width: 90%;
-            height: 90%;
-        }
-        h1 {
-            margin: 20px 0;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.css">
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+        </ul>
+    </nav>
 </head>
 <body>
-    <h1>Traffic Accident Data</h1>
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQOhqxGOpZllv1LzremzLcVlqjTl4uDAh71Gk166UOm2eFY5FcJiqIkzgav6jaBqA/pubhtml?gid=1399004628&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <h1>Traffic Accident Heat Map</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Increased iframe size for better visibility -->
+    <iframe 
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQOhqxGOpZllv1LzremzLcVlqjTl4uDAh71Gk166UOm2eFY5FcJiqIkzgav6jaBqA/pubhtml?gid=1399004628&amp;single=true&amp;widget=true&amp;headers=false"
+        width="100%" 
+        height="800px"
+        frameborder="0"
+        style="border: none;">
+    </iframe>
 </body>
 </html>
