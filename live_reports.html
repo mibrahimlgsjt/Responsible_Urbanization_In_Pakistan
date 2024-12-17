@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Reports - Crime and Traffic Accidents</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="live_reports.html">Live Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Live Reports of Crime and Traffic Accidents</h1>
+            <p>Stay updated with real-time crime and traffic accident reports.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Live Crime Reports -->
+            <section>
+                <h2>Live Crime Reports</h2>
+                <p>Below are real-time updates of crime incidents reported across various regions.</p>
+                <div class="report-container">
+                    <iframe 
+                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRAVDYxWHCmrYR_SVNU1trxvvQLWbYwFgDTkBN1j6nAb6MCGk8jOTXt5JIGCHuX7HgPUaQ2c3MBWjKC/pubhtml?gid=714316295&amp;single=true&amp;widget=true&amp;headers=false" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        style="border: 1px solid #ddd;">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- Live Traffic Accident Reports -->
+            <section>
+                <h2>Live Traffic Accident Reports</h2>
+                <p>Below are live updates of traffic accidents to help you plan your routes safely.</p>
+                <div class="report-container">
+                    <iframe 
+                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSvw5a50cqFtl-WbMcR-biCTFEF9Mpdbx-iF8cv7-K5nkq4hZMOHS6hD3C53dQkQ9IzaNy8QkoCcYrD/pubhtml?gid=1864210235&amp;single=true&amp;widget=true&amp;headers=false" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        style="border: 1px solid #ddd;">
+                    </iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2024 Pakistan Safety Project. Government of Pakistan. All rights reserved.</p>
+            <img src="pakistan_flag.png" alt="Pakistan Flag" class="flag-icon">
+        </div>
+    </footer>
+</body>
+</html>
