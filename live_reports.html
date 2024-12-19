@@ -9,10 +9,11 @@
     <style>
         /* Additional Styling to Control Iframe Width */
         .report-container {
-            width: 100%; /* Full width */
-            max-width: 1600px; /* Wider limit */
-            margin: 0 auto; /* Center the container */
+            width: 90%; /* Slightly reduced to ensure proper centering */
+            max-width: 1800px; /* Increased width limit for the crime incident table */
+            margin: 20px auto; /* Center the container with some vertical spacing */
             overflow: hidden;
+            text-align: center; /* Center the content inside */
         }
 
         iframe {
@@ -44,18 +45,6 @@
     <!-- Main Content -->
     <main>
         <div class="container">
-            <!-- Live Crime Reports -->
-            <section>
-                <h2>Live Crime Reports</h2>
-                <p>Below are real-time updates of crime incidents reported across various regions.</p>
-                <div class="report-container">
-                    <iframe 
-                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRAVDYxWHCmrYR_SVNU1trxvvQLWbYwFgDTkBN1j6nAb6MCGk8jOTXt5JIGCHuX7HgPUaQ2c3MBWjKC/pubhtml?gid=714316295&amp;single=true&amp;widget=true&amp;headers=false" 
-                        frameborder="0">
-                    </iframe>
-                </div>
-            </section>
-
             <!-- Live Traffic Accident Reports -->
             <section>
                 <h2>Live Traffic Accident Reports</h2>
@@ -63,6 +52,18 @@
                 <div class="report-container">
                     <iframe 
                         src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSvw5a50cqFtl-WbMcR-biCTFEF9Mpdbx-iF8cv7-K5nkq4hZMOHS6hD3C53dQkQ9IzaNy8QkoCcYrD/pubhtml?gid=1864210235&amp;single=true&amp;widget=true&amp;headers=false" 
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- Live Crime Reports -->
+            <section>
+                <h2>Live Crime Reports</h2>
+                <p>Below are real-time updates of crime incidents reported across various regions.</p>
+                <div class="report-container">
+                    <iframe 
+                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRAVDYxWHCmrYR_SVNU1trxvvQLWbYwFgDTkBN1j6nAb6MCGk8jOTXt5JIGCHuX7HgPUaQ2c3MBWjKC/pubhtml?gid=714316295&amp;single=true&amp;widget=true&amp;headers=false" 
                         frameborder="0">
                     </iframe>
                 </div>
